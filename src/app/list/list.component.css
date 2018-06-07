@@ -1,0 +1,21 @@
+
+.list-item {
+  display: flex;
+  margin: 20px 0;
+  border-bottom: 1px solid #696969;
+}
+
+.list-figure img {
+  width: 300px;
+  max-height: 300px;
+}
+
+.list-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-description p {
+  margin: 0;
+}
