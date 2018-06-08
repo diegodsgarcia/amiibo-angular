@@ -1,14 +1,17 @@
 
 <div class="container">
   <div class="list">
-    <div class="list-item">
+    <div class="list-item" *ngFor="let amiibo of amiibos">
       <figure class="list-figure">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/6136b7AfdUL._SL1500_.jpg" alt="Mario">
+        <img [src]="amiibo.image" [alt]="amiibo.name">
       </figure>
       <div class="list-description">
-        <h1>Mario</h1>
+        <h1>{{ amiibo.name }}</h1>
         <p>
-          Uma descrição que logo mais iremos pegar na API
+          <span>Nome:</span> {{ amiibo.name }}<br>
+          <span>Série:</span> {{ amiibo.series }}<br>
+          <span>Game:</span> {{ amiibo.series }}<br>
+          <span>Lançamento:</span> {{ amiibo.release[0] | release }}<br>
         </p>
       </div>
     </div>

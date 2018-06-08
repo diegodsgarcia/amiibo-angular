@@ -1,13 +1,16 @@
 
 .list-item {
   display: flex;
-  margin: 20px 0;
   border-bottom: 1px solid #696969;
 }
 
+.list-figure {
+  padding: 20px;
+}
+
 .list-figure img {
-  width: 300px;
-  max-height: 300px;
+  width: 150px;
+  max-height: 250px;
 }
 
 .list-description {
