@@ -6,12 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ReleasePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    //console.log(value);
-    let releases = Object.values(value)
-    releases = releases.map((date: any) => new Date(date + ':00:00:00'))
-    const result = releases.map((date) => this.transformDateInString(date)).join(' - ')
 
-    return result;
+    const result = this.transformDateInString(new Date(value.na + ':00:00:00'))
+
+    return result
   }
 
   transformDateInString(date) {
