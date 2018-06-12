@@ -1,4 +1,24 @@
 
+.list-loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-loading-icon {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e3e3e3;
+  border-left-color: #696969;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to { transform: rotate(360deg) }
+}
+
 .list-item {
   display: flex;
   border-bottom: 1px solid #696969;
@@ -9,8 +29,8 @@
 }
 
 .list-figure img {
-  width: 150px;
   max-height: 250px;
+  width: 150px;
 }
 
 .list-description {

@@ -6,6 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ReleasePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
+    if(!value.na) {
+      return 'Ainda não foi lançado na America';
+    }
 
     const result = this.transformDateInString(new Date(value.na + ':00:00:00'))
 

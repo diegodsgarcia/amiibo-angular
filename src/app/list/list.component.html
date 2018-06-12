@@ -1,7 +1,12 @@
 
 <div class="container">
   <div class="list">
-    <div class="list-item" *ngFor="let amiibo of amiibos">
+
+    <div *ngIf="!isLoad" class="list-loading">
+      <div class="list-loading-icon"></div>
+    </div>
+
+    <div class="list-item" *ngFor="let amiibo of amiibos | async">
       <figure class="list-figure">
         <img [src]="amiibo.image" [alt]="amiibo.name">
       </figure>
@@ -11,9 +16,10 @@
           <span>Nome:</span> {{ amiibo.name }}<br>
           <span>Série:</span> {{ amiibo.series }}<br>
           <span>Game:</span> {{ amiibo.series }}<br>
-          <span>Lançamento:</span> {{ amiibo.release[0] | release }}<br>
+          <span>Lançamento:</span> {{ amiibo.release | release }}<br>
         </p>
       </div>
     </div>
+
   </div>
 </div>
