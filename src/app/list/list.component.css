@@ -1,4 +1,8 @@
 
+.list {
+  padding: 20px 0;
+}
+
 .list-loading {
   height: 100vh;
   display: flex;
@@ -21,7 +25,9 @@
 
 .list-item {
   display: flex;
-  border-bottom: 1px solid #696969;
+  background-color: #ffffff;
+  margin: 20px 0;
+  box-shadow: 2px 2px 5px #989898;
 }
 
 .list-figure {
