@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
-import { Amiibo } from '../../models/Amiibo'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Amiibo } from '../../models/Amiibo';
 
 import { AmiiboService } from '../providers/amiibo.service';
 import { Observable } from 'rxjs';
@@ -11,10 +11,10 @@ import { Observable } from 'rxjs';
 })
 export class ListComponent implements OnInit {
 
-  @Input() title: string
-  @Output() list: EventEmitter<any> = new EventEmitter()
-  amiibos: Observable<Amiibo[]>
-  isLoad: boolean = false
+  @Input() title: string;
+  @Output() list: EventEmitter<any> = new EventEmitter();
+  amiibos: Observable<Amiibo[]>;
+  isLoad: boolean = false;
 
   constructor(private amiiboService: AmiiboService) {}
 
@@ -22,9 +22,9 @@ export class ListComponent implements OnInit {
     this.amiibos = this.amiiboService.getAll();
 
     this.amiibos.subscribe((amiibos) => {
-      this.list.emit(amiibos)
-      this.isLoad = true
-    })
+      this.list.emit(amiibos);
+      this.isLoad = true;
+    });
   }
 
 }

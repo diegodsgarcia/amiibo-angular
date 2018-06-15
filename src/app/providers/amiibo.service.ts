@@ -24,6 +24,6 @@ export class AmiiboService {
           amiibo.release,
         ))
       )
-    )
+    );
   }
 }

@@ -10,13 +10,13 @@ export class ReleasePipe implements PipeTransform {
       return 'Ainda não foi lançado na America';
     }
 
-    const result = this.transformDateInString(new Date(value.na + ':00:00:00'))
+    const result = this.transformDateInString(new Date(value.na + ':00:00:00'));
 
-    return result
+    return result;
   }
 
   transformDateInString(date) {
-    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   }
 
 }
